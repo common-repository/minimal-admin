@@ -1,0 +1,97 @@
+/* Plugin page */
+.wp-list-table.widefat.plugins th#name {
+	display:block;
+	visibility: visible;
+}
+
+.wp-list-table.widefat.plugins .column-description {
+	display: none;
+}
+
+.wp-list-table.widefat.plugins td.plugin-title {
+	visibility: visible;
+	padding: 0;
+	height: 30px;
+	overflow: hidden;
+	width: 100% !important;
+}
+
+.wp-list-table.widefat.plugins td.plugin-title strong {
+	margin-top: 0;
+	padding-left: 10px;
+	line-height: 30px;
+	display: inline;
+	float: left;
+}
+
+// Plugin update message - remove red background
+.plugins .active.update td,
+.plugins .active.update th,
+tr.active.update+tr.plugin-update-tr .plugin-update {
+	background-color: #F0F5F7;
+}
+
+tr.active+tr.plugin-update-tr:not(.updated) .plugin-update .update-message,
+tr.active+tr.plugin-update-tr:not(.updated) .plugin-update .update-message {
+	background-color:#E9EEF0;
+}
+
+// Remove margin from update message
+.plugin-update-tr .update-message {
+	margin:0;
+}
+.plugin-install-php .tablenav {
+	display: block;
+}
+
+tr.inactive td.plugin-title.column-primary {
+	background-color: #FFF;
+}
+
+// remove shadow
+.plugin-install #the-list td,
+.plugins .active td,
+.plugins .active th,
+.plugins .inactive td,
+.plugins .inactive th,
+.upgrade .plugins td,
+.upgrade .plugins th {
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	border-bottom:1px solid #e1e1e1;
+}
+
+.plugins tr.active+tr.inactive td,
+.plugins tr.active+tr.inactive th,
+.plugins tr.active.plugin-update-tr+tr.inactive td,
+.plugins tr.active.plugin-update-tr+tr.inactive th {
+	border-top:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+#adminmenu .awaiting-mod, #adminmenu .update-plugins {
+	background-color:#0073aa;
+}
+
+// acf theme code tweaks
+// acf theme code tweaks
+[data-pseudo-content]::before,
+code[class*="language-"], pre[class*="language-"] {
+	font-family: 'operator mono' !important;
+	text-shadow: none !important;
+}
+
+// seo tweaks
+#wpseo_meta {
+	overflow: scroll;
+}
+
+#misc-publishing-actions .yoast-seo-score {
+	display: none;
+}
+
+body.taxonomy-category .column-wpseo_score,
+body.taxonomy-category .column-wpseo_score_readability { 
+	display: none;
+}
